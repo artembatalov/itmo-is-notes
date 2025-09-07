@@ -1,0 +1,13 @@
+# Игнорируем все файлы с именем "*course overview.md" в любых подпапках
+**/*course overview.md
+**/*course_overview.md
+
+# (опционально) явные пути относительно корня репозитория — НЕЛЬЗЯ ставить /Users/… и не нужно кавычек
+/Linear algebra/Linear algebra - course overview.md
+/Discrete mathematics/Discrete mathematics - course overview.md
+/Algorithms and data structures/Algorithms and data structures - course overview.md
+/Mathematical analysis/Mathematical analysis - course overview.md
+/Programming basics/Programming basics - course overview.md
+/Software development tools/Software development tools - course overview.md
+/English (C1)/English (C1) - course overview.md
+.obsidian
