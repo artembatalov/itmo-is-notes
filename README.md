@@ -1,1 +1,0 @@
-Hello! I'm Artem Batalov (ITMO IS 29' student) and here is my personal open notes space.
