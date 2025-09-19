@@ -40,6 +40,15 @@ git commit -m "Feature-1 is developed!"
 ```bash
 git merge feature-1
 ```
+8. If we don't like commit:
+```bash
+git reflog # see everuthing
+git reset HEAD@{index}
+```
+9. If we want to go to the previous versions:
+```bash
+git log
+```
 ## Gitflow
 
 | Branch Type     | Purpose & Description                                                                                                                                 | Naming Convention                             | Branches From | Merges Into              |

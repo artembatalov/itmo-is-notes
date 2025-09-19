@@ -1,4 +1,4 @@
-## Merge sort
+## Сортировка слиянием (merge sort)
 ```cpp
 #include <iostream>
 #include <vector>
@@ -63,9 +63,23 @@ int main() {
       std::cout << arr[i] << " ";
     }
 }
-## Fast sort
 ```
-Два разбиения
-https://www.geeksforgeeks.org/dsa/merge-sort/
-Мастер теорема
-Устойчивая и не устойчивая сортировка
+
+## Мастер теорема
+Мастер теорема позволяет найти асимптотическое решение реккурнтных соотношений, которые могут возникнуть в анализе асимптотики многих алгоритмов.
+
+Пусть имеются рекуррентные соотношения:
+$$
+T(n) = 
+\begin{cases}
+a \, T\!\left(\dfrac{n}{b}\right) + f(n^c), & n > 1, \\[1ex]
+\Theta(1), & n = 1.
+\end{cases}
+$$
+где: $a \in \mathbb{N}$, $b \in \mathbb{R}$, $b > 1$, $c \in \mathbb{R}^+$. Тогда асимптотическое решение имеет вид:
+1. Если $c > \log_{b}a$, то $T(n) = O(n^c)$,
+2. Если $c = \log_{b}a$, то $T(n) = O(n^c*\log n)$,
+3. Если $c < \log_{b}a$, то $T(n) = O(n^{\log_{b} a})$.
+
+## Ссылки (links):
+1. [Мастер-теорема (Викиконспекты ИТМО)](https://neerc.ifmo.ru/wiki/index.php?title=Мастер-теорема)
