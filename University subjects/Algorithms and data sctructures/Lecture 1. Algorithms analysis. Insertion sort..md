@@ -18,9 +18,8 @@ $f(n) \in \Theta(g(n)) \Leftrightarrow \exists \, c > 0, n_0 > 0 \; : \; \forall
 
 Пример: $5n^2 + 3n + 7 \in \Theta(n^2).$
 ## Сортировка вставками
-
-$O(n)=n ^ 2$
-
+$O(n)=n ^ 2$ - худший случай,
+$O(n)=n$ - лучший случай,
 ```cpp
 int n = 4;  
 vector<int>v{1, 3, 4, 2};

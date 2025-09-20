@@ -1,4 +1,5 @@
 ## Сортировка слиянием (merge sort)
+
 ```cpp
 #include <iostream>
 #include <vector>
@@ -65,6 +66,48 @@ int main() {
 }
 ```
 
+## Быстрая сортировка
+```cpp
+#include <iostream>  
+#include <vector>  
+using namespace std;  
+  
+int partition(vector<int>& v, int l, int h) {  
+    int pivot = v[h];  
+    int i = l - 1;  
+  
+    for (int j = l; j <= h - 1; j++) {  
+        if (v[j] < pivot) {  
+            i++;  
+            swap(v[i], v[j]);  
+        }  
+    }  
+    swap(v[i + 1], v[h]);  
+    return i + 1;  
+}  
+  
+void Quick_sort(vector<int> &v, int l, int h) {  
+    if (l < h) {  
+        int pi = partition(v, l, h);  
+  
+        Quick_sort(v, l, pi - 1);  
+        Quick_sort(v, pi + 1, h);  
+    }  
+}  
+  
+int main() {  
+    int n;  
+    cin >> n;  
+    vector<int> v(n);  
+    for (int i = 0; i < n; i++) {  
+        cin >> v[i];  
+    }  
+    Quick_sort(v, 0, n - 1);  
+    for (int i = 0; i < n; i++) {  
+        cout << v[i] << " ";  
+    }  
+}
+```
 ## Мастер теорема
 Мастер теорема позволяет найти асимптотическое решение реккурнтных соотношений, которые могут возникнуть в анализе асимптотики многих алгоритмов.
 
